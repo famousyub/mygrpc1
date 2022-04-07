@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package="hello/";
+package messenger;
+
+message Messagesender {
+  string body = 1;
+}
+
+service MessageService {
+  rpc SayHello(Messagesender) returns (Messagesender) {}
+}
